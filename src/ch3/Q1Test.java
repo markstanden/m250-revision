@@ -17,6 +17,7 @@ class Q1Test
 	}
 
 
+
 	@org.junit.jupiter.api.Test
 	void onlyOneTrue()
 	{
