@@ -1,5 +1,7 @@
 package pp2013;
 
+import MadeUpOULibrary.Frog;
+
 public class TrainableFrog extends Frog implements Trainable
 {
 	public TrainableFrog()
@@ -19,7 +21,7 @@ public class TrainableFrog extends Frog implements Trainable
 	{
 		for(int i = 0; i < numberToPerform; i++) {
 			jump();
-			moveRight(1);
+			right(1);
 			croak();
 		}
 	}
@@ -28,13 +30,13 @@ public class TrainableFrog extends Frog implements Trainable
 	@Override
 	public void marchToMiddle()
 	{
-		while(pos != 5) {
+		while(position != 5) {
 			jump();
-			if(pos < 5) {
-				moveRight(1);
+			if(position < 5) {
+				right(1);
 			}
-			else if(pos > 5) {
-				moveLeft(1);
+			else if(position > 5) {
+				left(1);
 			}
 		}
 	}

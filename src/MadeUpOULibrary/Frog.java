@@ -1,10 +1,10 @@
-package pp2013;
+package MadeUpOULibrary;
 
 public abstract class Frog
 {
 	public static int MAX_STONES = 10;
 
-	protected int pos;
+	protected int position;
 
 
 	public Frog()
@@ -16,9 +16,21 @@ public abstract class Frog
 	public Frog(int initialPos) throws IllegalArgumentException
 	{
 		if(initialPos > MAX_STONES || initialPos < 1) {
-			throw new IllegalArgumentException("Invalid number of stones.");
+			throw new IllegalArgumentException("Invalid starting location.");
 		}
-		pos = initialPos;
+		position = initialPos;
+	}
+
+
+	public void setPosition(int aPosition)
+	{
+		position = aPosition;
+	}
+
+
+	public int getPosition()
+	{
+		return position;
 	}
 
 
@@ -28,19 +40,19 @@ public abstract class Frog
 	}
 
 
-	public void moveLeft(int numberOfStones)
+	public void left(int numberOfStones)
 	{
-		if(pos > 1) {
-			pos -= numberOfStones;
+		if(position > 1) {
+			position -= numberOfStones;
 			System.out.printf("Left %d\n", numberOfStones);
 		}
 	}
 
 
-	public void moveRight(int numberOfStones)
+	public void right(int numberOfStones)
 	{
-		if(pos < MAX_STONES) {
-			pos += numberOfStones;
+		if(position < MAX_STONES) {
+			position += numberOfStones;
 			System.out.printf("Right %d\n", numberOfStones);
 		}
 	}
