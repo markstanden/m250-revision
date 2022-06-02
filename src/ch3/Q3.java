@@ -58,7 +58,7 @@ public class Q3
 				System.out.println("high res");
 			}
 			else {
-				System.out.println("low res");
+				System.out.println("low res");git
 			}
 			*/
 
