@@ -40,9 +40,29 @@ public class Q3
 	{
 		public void test(int w, int h)
 		{
+			// Declare a new instance of Screen class.
 			Screen sc = new Screen(w, h);
+
+			/*
+			Print out the number of pixels
+				public int numberOfPixels() { return width * height; }
+			*/
 			System.out.println(sc.numberOfPixels());
+
+			/* I used a ternary operator to choose the correct resolution to display */
 			System.out.println(sc.numberOfPixels() >= 1e6 ? "high res" : "low res");
+
+			/* This way should also work */
+			/*
+			if (sc.numberOfPixels() >= 1e6) {
+				System.out.println("high res");
+			}
+			else {
+				System.out.println("low res");
+			}
+			*/
+
+			/* Just call the clear method with the correct argument */
 			sc.clear(false);
 			sc.clear(true);
 		}

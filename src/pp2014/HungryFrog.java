@@ -46,11 +46,26 @@ public class HungryFrog extends Frog implements Feedable
 	@Override
 	public boolean feed()
 	{
-		final Set<Integer> FEEDING_STONES = Set.of(1,10);
-		if (FEEDING_STONES.contains(position)) {
-			// Feed
-		} else {
+		final Set<Integer> FEEDING_STONES = Set.of(1, 10);
 
+		if(! FEEDING_STONES.contains(position)) {
+			if(position <= 5) {
+				setPosition(1);
+			}
+			else {
+				setPosition(10);
+			}
+		}
+
+		if(FEEDING_STONES.contains(position)) {
+			while(energyLevel < FULL) {
+				energyLevel += 100;
+				croak();
+			}
+			return true;
+		}
+		else {
+			return false;
 		}
 	}
 }

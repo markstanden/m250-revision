@@ -106,7 +106,7 @@ class HungryFrogTest
 		// Assert
 		var expectedPos = 3;
 		var actualPos = sut.getPosition();
-		var expectedEnergy = 0;
+		var expectedEnergy = 100;
 		var actualEnergy = sut.getEnergyLevel();
 
 		assertFalse(outcome);
@@ -150,7 +150,7 @@ class HungryFrogTest
 		// Assert
 		var expectedPos = 8;
 		var actualPos = sut.getPosition();
-		var expectedEnergy = 0;
+		var expectedEnergy = 100;
 		var actualEnergy = sut.getEnergyLevel();
 
 		assertFalse(outcome);
