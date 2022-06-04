@@ -43,7 +43,7 @@ public abstract class Frog
 	public void left(int numberOfStones)
 	{
 		if(position > 1) {
-			position -= numberOfStones;
+			setPosition(position - numberOfStones);
 			System.out.printf("Left %d\n", numberOfStones);
 		}
 	}
@@ -52,7 +52,7 @@ public abstract class Frog
 	public void right(int numberOfStones)
 	{
 		if(position < MAX_STONES) {
-			position += numberOfStones;
+			setPosition(position + numberOfStones);
 			System.out.printf("Right %d\n", numberOfStones);
 		}
 	}
