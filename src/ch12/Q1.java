@@ -46,7 +46,7 @@ public class Q1
 		public String displayTime()
 		{
 			int mins = (int) seconds / 60;
-			double remainder = seconds - (mins * 60);
+			double remainder = seconds % 60;
 			return String.format("The timer says: %d minutes %.2f seconds", mins, remainder);
 			//return String.format("The timer says: %1$tM minutes %1$tS seconds", (long) seconds * 1000);
 		}
