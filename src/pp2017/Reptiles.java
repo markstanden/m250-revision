@@ -1,5 +1,6 @@
 package pp2017;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -24,8 +25,8 @@ public class Reptiles
 
 	public int howManySpecies()
 	{
-		return Set.of(myLizards)
-		          .size();
+		Set<String> reptiles = new HashSet<>(myLizards);
+		return reptiles.size();
 	}
 
 
