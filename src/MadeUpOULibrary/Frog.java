@@ -15,6 +15,7 @@ public abstract class Frog extends Amphibian
 
 	public Frog(int initialPos) throws IllegalArgumentException
 	{
+		super();
 		if(initialPos > MAX_STONES || initialPos < 1) {
 			throw new IllegalArgumentException("Invalid starting location.");
 		}
