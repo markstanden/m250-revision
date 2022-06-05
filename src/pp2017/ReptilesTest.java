@@ -1,15 +1,14 @@
 package pp2017;
 
-import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ReptilesTest extends ConsoleTest
+class ReptilesTest
 {
 
 	@Test
-	void addLizard()
+	void addLizard_HowManyTests()
 	{
 		Reptiles sut = new Reptiles();
 		sut.addLizard("Test1");
@@ -28,7 +27,7 @@ class ReptilesTest extends ConsoleTest
 
 
 	@Test
-	void doIHaveIt()
+	void doIHaveItTest()
 	{
 		Reptiles sut = new Reptiles();
 		assertFalse(sut.doIHaveIt("Test1"));
@@ -45,7 +44,7 @@ class ReptilesTest extends ConsoleTest
 
 
 	@Test
-	void update()
+	void updateTest()
 	{
 		Reptiles sut = new Reptiles();
 		sut.addLizard("Uromastyx Moroccan");
@@ -59,7 +58,7 @@ class ReptilesTest extends ConsoleTest
 
 
 	@Test
-	void removeLizard()
+	void removeLizardTest()
 	{
 		Reptiles sut = new Reptiles();
 		sut.addLizard("Uromastyx Moroccan");
