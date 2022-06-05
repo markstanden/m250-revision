@@ -4,7 +4,11 @@ public class Team
 {
 	private final int MAX_PLAYERS;
 	private Player[] players;
+
+
 	private int numOfPlayers; //number of players in the array
+
+
 	private String name;
 
 
@@ -17,6 +21,12 @@ public class Team
 	}
 
 
+	public void setNumOfPlayers(int aNumOfPlayers)
+	{
+		numOfPlayers = aNumOfPlayers;
+	}
+
+
 	@Override
 	public String toString()
 	{
@@ -25,5 +35,11 @@ public class Team
 			temp = temp + players[i].toString() + "\n";
 		}
 		return temp;
+	}
+
+
+	public Player[] getPlayers()
+	{
+		return players;
 	}
 }
