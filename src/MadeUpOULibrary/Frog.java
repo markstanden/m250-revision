@@ -1,6 +1,6 @@
 package MadeUpOULibrary;
 
-public abstract class Frog
+public abstract class Frog extends Amphibian
 {
 	public static int MAX_STONES = 10;
 
