@@ -8,7 +8,7 @@ class TeamTest
 {
 
 	@Test
-	void testToString()
+	public void testToString()
 	{
 		Team myTeam = new Team();
 		assertEquals("Team  has the following players:\n", myTeam.toString());
@@ -16,7 +16,7 @@ class TeamTest
 
 
 	@Test
-	void proofThatPassedReferencesAreADodgyBusiness()
+	public void proofThatPassedReferencesAreADodgyBusiness()
 	{
 		// Initialise and test the Team
 		Team bestTeam = new Team();
