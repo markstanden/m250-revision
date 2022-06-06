@@ -12,6 +12,12 @@ public abstract class ConsoleTest
 	private ByteArrayOutputStream console;
 
 
+	protected String getConsole()
+	{
+		return console.toString();
+	}
+
+
 	protected String getStrippedConsole()
 	{
 		return console.toString()
