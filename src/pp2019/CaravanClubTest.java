@@ -36,14 +36,30 @@ class CaravanClubTest extends ConsoleTest
 
 		CaravanClub sut = new CaravanClub();
 		sut.addSite(site1);
-		assertEquals(4, sut.getArrByTime().size());
+		assertEquals(4,
+		             sut.getArrByTime()
+		                .size());
 		sut.addSite(site2);
-		assertEquals(7, sut.getArrByTime().size());
+		assertEquals(7,
+		             sut.getArrByTime()
+		                .size());
 		sut.addSite(site3);
-		assertEquals(10, sut.getArrByTime().size());
-		assertNull(sut.getArrByTime().get(0));
-		assertEquals(1, sut.getArrByTime().get(1).size());
-		assertEquals(2, sut.getArrByTime().get(10).size());
-		assertEquals(4, sut.getArrByTime().get(20).size());
+		assertEquals(10,
+		             sut.getArrByTime()
+		                .size());
+		assertNull(sut.getArrByTime()
+		              .get(0));
+		assertEquals(1,
+		             sut.getArrByTime()
+		                .get(1)
+		                .size());
+		assertEquals(2,
+		             sut.getArrByTime()
+		                .get(10)
+		                .size());
+		assertEquals(4,
+		             sut.getArrByTime()
+		                .get(20)
+		                .size());
 	}
 }
