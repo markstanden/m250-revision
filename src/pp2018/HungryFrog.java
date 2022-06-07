@@ -65,7 +65,7 @@ public class HungryFrog extends Frog implements Feedable
 		final int FEEDING_STONE_HIGH = 10;
 
 		// Floor division leaves the highest stone closest to A
-		final int MIDWAY_POINT = (FEEDING_STONE_HIGH - FEEDING_STONE_LOW) / 2;  // 5
+		final int MIDWAY_POINT = ((FEEDING_STONE_HIGH - FEEDING_STONE_LOW) + 1) / 2;  // 5
 
 		if(getPosition() != FEEDING_STONE_LOW && getPosition() != FEEDING_STONE_HIGH) {
 			// not on a feeding stone yet.  attempt to move.
