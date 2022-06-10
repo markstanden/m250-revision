@@ -6,11 +6,11 @@ public class SpeedLimitedTrain extends Train
 	private int speedLimit;
 
 
-	public SpeedLimitedTrain()
+	public SpeedLimitedTrain(int speedLimit)
 	{
 		super();
 		maxPower = 10;
-		speedLimit = 100;
+		this.speedLimit = speedLimit;
 	}
 
 

@@ -11,9 +11,79 @@ public class RoomCode
 	}
 
 
+	/**
+	 * @param roomCode
+	 * 		Four digit room code
+	 *
+	 * @return True if code is valid
+	 */
+	private static boolean isValidCode(String roomCode)
+	{
+		// Return early if the basic checks fail
+		if(roomCode == null || roomCode.length() != 4) {
+			return false;
+		}
+
+		// if the building letter is outside of the range, return false
+		if(! inCharRange(roomCode.charAt(0), 'A', 'J')) {
+			return false;
+		}
+
+		// if the floor number is outside of the range return false
+		if(! inCharRange(roomCode.charAt(1), '0', '9')) {
+			return false;
+		}
+
+		// if the first room number is outside of the range return false
+		if(! inCharRange(roomCode.charAt(2), '0', '9')) {
+			return false;
+		}
+
+		// if the second room number is outside of the both ranges return false
+		if(! inCharRange(roomCode.charAt(3), '0', '9') && ! inCharRange(roomCode.charAt(3), 'A', 'C')) {
+			return false;
+		}
+		return true;
+	}
+
+
+	/**
+	 * Tests whether the provided char is within the provided range (inclusive)
+	 *
+	 * @param testChar
+	 * 		The char to check falls within the range
+	 * @param startCharIncl
+	 * 		The starting char of the range
+	 * @param endCharIncl
+	 * 		The end char of the range
+	 *
+	 * @return boolean True if the char is in the provided range (inclusive)
+	 */
+	private static boolean inCharRange(char testChar, char startCharIncl, char endCharIncl)
+	{
+		return testChar >= startCharIncl && testChar <= endCharIncl;
+	}
+
+
 	public String getCode()
 	{
 		return code;
+	}
+
+
+	/**
+	 * The method determines if the argument represents a valid code. If so, the
+	 * receiver’s code variable is set to the argument, otherwise no change is
+	 * made.
+	 *
+	 * @param roomCode
+	 * 		the new code.
+	 */
+	public void setCode(String roomCode)
+	{
+		if(isValidCode(roomCode)) {
+			code = roomCode;
+		}
 	}
 
 
@@ -54,76 +124,6 @@ public class RoomCode
 	public String toString()
 	{
 		return String.format("Building %c Floor %c Room %s", getBuilding(), getFloor(), getRoom());
-	}
-
-
-	/**
-	 * @param roomCode
-	 * 		Four digit room code
-	 *
-	 * @return True if code is valid
-	 */
-	private static boolean isValidCode(String roomCode)
-	{
-		// Return early if the basic checks fail
-		if(roomCode == null || roomCode.length() != 4) {
-			return false;
-		}
-
-		// if the building letter is outside of the range, return false
-		if(! inCharRange(roomCode.charAt(0), 'A', 'J')) {
-			return false;
-		}
-
-		// if the floor number is outside of the range return false
-		if(! inCharRange(roomCode.charAt(1), '0', '9')) {
-			return false;
-		}
-
-		// if the first room number is outside of the range return false
-		if(! inCharRange(roomCode.charAt(2), '0', '9')) {
-			return false;
-		}
-
-		// if the first room number is outside of the range return false
-		if(inCharRange(roomCode.charAt(3), '0', '9') || inCharRange(roomCode.charAt(3), 'A', 'C')) {
-			return true;
-		}
-		return false;
-	}
-
-
-	/**
-	 * Tests whether the provided char is within the provided range (inclusive)
-	 *
-	 * @param testChar
-	 * 		The char to check falls within the range
-	 * @param startCharIncl
-	 * 		The starting char of the range
-	 * @param endCharIncl
-	 * 		The end char of the range
-	 *
-	 * @return boolean True if the char is in the provided range (inclusive)
-	 */
-	private static boolean inCharRange(char testChar, char startCharIncl, char endCharIncl)
-	{
-		return testChar >= startCharIncl && testChar <= endCharIncl;
-	}
-
-
-	/**
-	 * The method determines if the argument represents a valid code. If so, the
-	 * receiver’s code variable is set to the argument, otherwise no change is
-	 * made.
-	 *
-	 * @param roomCode
-	 * 		the new code.
-	 */
-	public void setCode(String roomCode)
-	{
-		if(isValidCode(roomCode)) {
-			code = roomCode;
-		}
 	}
 
 

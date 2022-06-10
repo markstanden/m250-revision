@@ -29,7 +29,7 @@ public abstract class Train implements Railable
 
 	public void setSpeed(int aSpeed)
 	{
-		if(speed >= 0) {
+		if(aSpeed >= 0) {
 			speed = aSpeed;
 		}
 	}
@@ -43,7 +43,7 @@ public abstract class Train implements Railable
 
 	public void setPower(int aPower)
 	{
-		if(power > 0) {
+		if(aPower > 0) {
 			power = aPower;
 		}
 	}
